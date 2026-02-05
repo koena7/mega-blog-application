@@ -14,7 +14,7 @@ class DatabaseService{
         this.database = new TablesDB(client);
     }
 
-    async createArticle({id, title, body, userId, image, status}){
+    async createPost({id, title, body, userId, image, status}){
         try {
             return await this.database.createRow({
                 databaseId: config.appwriteDatabaseId,
