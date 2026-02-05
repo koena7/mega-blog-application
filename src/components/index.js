@@ -5,4 +5,4 @@ import Button from "./button/Button";
 import Container from "./container/Container";
 import Logo from "./footer/Logo";
 
-export { Footer, Header, LogoutBtn, Button, Container,Logo };
+export { Footer, Header, LogoutBtn, Button, Container, Logo };
