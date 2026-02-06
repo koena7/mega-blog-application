@@ -11,7 +11,7 @@ class DatabaseService{
             .setEndpoint(config.appwriteUrl)
             .setProject(config.appwriteProjectId);
         
-        this.database = new TablesDB(client);
+        this.database = new TablesDB(this.client);
     }
 
     async createPost({id, title, body, userId, image, status}){
