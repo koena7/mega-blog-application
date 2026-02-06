@@ -5,6 +5,8 @@ import SignUpPage from "../pages/SignUpPage";
 import AllBlogsPage from "../pages/AllBlogsPage";
 import AddBlogPage from "../pages/AddBlogPage";
 import EditBlogPage from "../pages/EditBlogPage";
+import App from "../App";
+import HomePage from "../pages/HomePage";
 
 
 export const Router = createBrowserRouter([
@@ -14,7 +16,7 @@ export const Router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
+        element: <HomePage />
       },
       {
         path: 'login',
