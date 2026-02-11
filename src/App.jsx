@@ -3,6 +3,9 @@ import config from './config/config'
 import { useDispatch } from 'react-redux'
 import { login, logout } from './state-management/authSlice'
 import authService from './appwrite-services/AuthenticationService'
+import LoginPage from './pages/LoginPage'
+import { Footer, Header } from './components'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,16 +27,11 @@ function App() {
   },[])
 
   return !loading ? (
-      loggedIn ? (
-        <div className='flex w-full bg-pink-200'>
-          Our Todos
-        </div>
-      ) : (
-        <div className='flex w-full bg-pink-200'>
-          You need to log in
-        </div>
-      )
-    
+    <div>
+      <Header/>
+      <Outlet />
+      <Footer/>
+    </div>
   ) : (
     <h1>Loading...</h1>
   )

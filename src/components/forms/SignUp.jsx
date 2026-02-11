@@ -3,12 +3,12 @@ import { Logo, Button, Input } from '../index'
 import { useForm } from 'react-hook-form';
 import authService from '../../appwrite-services/AuthenticationService';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function SignUp() {
 
     const [error, setError] = useState('');
-    const {handleSubmit, register} = useForm;
+    const {handleSubmit, register} = useForm();
     const dispatch = useDispatch();
     const navigate = useNavigate();
 

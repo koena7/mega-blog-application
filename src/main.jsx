@@ -8,9 +8,9 @@ import { RouterProvider } from 'react-router-dom'
 import { Router } from './routes/routes.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <Provider store = {store}>
-    <RouterProvider router={Router}>
-      <App />
-    </RouterProvider>
-  </Provider>
+  <StrictMode>
+    <Provider store = {store}>
+      <RouterProvider router={Router} /> 
+    </Provider>
+  </StrictMode>
 )

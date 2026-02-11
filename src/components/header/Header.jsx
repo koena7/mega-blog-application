@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Button, Container, Logo, LogoutBtn } from '../index'
 import { useSelector } from 'react-redux';
 
