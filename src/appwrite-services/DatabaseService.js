@@ -80,7 +80,7 @@ class DatabaseService{
 
     async fetchActivePosts(){
         try {
-            this.database.getRow({
+            this.database.listRows({
                 databaseId: config.appwriteDatabaseId,
                 tableId: config.appwriteTableId,
                 queries: [

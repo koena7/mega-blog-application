@@ -43,6 +43,14 @@ export const Router = createBrowserRouter([
         )
       },
       {
+        path: 'myBlogs',
+        element: (
+          <AuthLayout>
+            <AllBlogsPage />
+          </AuthLayout>
+        )
+      },
+      {
         path: 'addBlog',
         element: (
           <AuthLayout>

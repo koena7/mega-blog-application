@@ -1,4 +1,4 @@
-import {Login} from '../components/index'
+import { Login } from '../components/index'
 
 function LoginPage() {
     return(

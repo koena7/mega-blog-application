@@ -9,6 +9,10 @@ function AuthLayout({children, authRequired = true}) {
     const authStatus = useSelector(state => state.auth.loggedIn)
     const navigate = useNavigate();
 
+    useEffect(()=>{
+        console.log('loading auth')
+    },[])
+
     useEffect(() => {
         if(authRequired == true  && authStatus !== authRequired){
             navigate('/login')
@@ -20,8 +24,7 @@ function AuthLayout({children, authRequired = true}) {
     
     return (
         <>
-        <div>auth layout</div>
-            {Loader ? (<div>Loading...</div>) : {children}}
+            {loader ? (<div>Loading...</div>) : <>{children}</>}
         </>
     )
 }

@@ -3,7 +3,7 @@ import { Button, Container, Logo, LogoutBtn } from '../index'
 import { useSelector } from 'react-redux';
 
 function Header() {
-    const isLoggedIn = useSelector((state) => state.loggedIn)
+    const isLoggedIn = useSelector((state) => state.auth.loggedIn)
     const navigate = useNavigate();
 
     const navItems = [
@@ -23,18 +23,18 @@ function Header() {
             active: !isLoggedIn
         },
         {
-            name: 'allPosts',
-            path: '/allPosts',
+            name: 'allBlogs',
+            path: '/allBlogs',
             active: isLoggedIn
         },
         {
-            name: 'myPosts',
-            path: '/myPosts',
+            name: 'myBlogs',
+            path: '/myBlogs',
             active: isLoggedIn
         },
         {
-            name: 'addPosts',
-            path: '/addPosts',
+            name: 'addBlog',
+            path: '/addBlog',
             active: isLoggedIn
         }
     ]
@@ -42,14 +42,14 @@ function Header() {
     return(
         <header>
             <Container>
-                <nav>
+                <nav className='flex flex-row justify-between'>
                     <div>
                         <Link to='/'><Logo/></Link>
                     </div>
-                    <div>
-                        <ul>
+                    <div className='flex flex-row'>
+                        <ul className='flex flex-row'>
                             {navItems.map((navItem) => {
-                                navItem.active ? (
+                                return navItem.active ? (
                                     <li key = {navItem.name}>
                                         <Button 
                                             onClick={() => {

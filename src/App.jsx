@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import config from './config/config'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './state-management/authSlice'
 import authService from './appwrite-services/AuthenticationService'
 import LoginPage from './pages/LoginPage'

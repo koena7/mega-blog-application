@@ -12,10 +12,10 @@ function SignUp() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const handleSignUp = () => {
+    const handleSignUp = (data) => {
         setError('')
         try {
-            const session = authService.signUp();
+            const session = authService.signUp(data);
             if(session){
                 const userData = authService.getCurrentUser();
                 if(userData){
@@ -35,7 +35,7 @@ function SignUp() {
             </div>
 
             <div>
-                {error && <div className='text-red-500'>{error}</div>}
+                {error && <div className='text-red-700'>{error}</div>}
             </div>
 
             <form onSubmit={handleSubmit(handleSignUp)}>

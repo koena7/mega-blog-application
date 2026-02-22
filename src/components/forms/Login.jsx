@@ -69,7 +69,7 @@ function Login(){
             {/* not a user?Sign up. */}
             <div>
                 Don't have an account?
-                <Link to='signup'>SignUp</Link>
+                <Link to='/signup'>SignUp</Link>
             </div>
         </div>
     )

@@ -70,7 +70,7 @@ function Blog({post}) {
             }
         })
         return () => subscription.unsubscribe()
-    },[title, transformId, setValue])
+    },[transformId, setValue])
 
     return(
         <form onSubmit={handleSubmit(onBlogSubmit)}>

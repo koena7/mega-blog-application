@@ -12,9 +12,10 @@ class AuthenticationService{
         this.account = new Account(this.client);
     }
 
-    async signUp(email, password, name){
+    async signUp({email, password, name}){
         try {
             const createdUser = await this.account.create({
+                name: name,
                 userId: ID.unique(),
                 email: email,
                 password: password
@@ -52,6 +53,9 @@ class AuthenticationService{
         try {
             return await this.account.get();
         } catch (error) {
+            if(error.code === 401){
+                return null;
+            }
             console.log('error while fetching current user: '+error)
         }
     }
